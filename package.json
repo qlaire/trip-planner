@@ -4,7 +4,8 @@
   "description": "The best trip planner ever (Until next workshop)",
   "main": "app.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "nodemon app.js"
   },
   "keywords": [
     "trip",
