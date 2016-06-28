@@ -32,8 +32,7 @@ var db = new Sequelize('postgres://localhost/tripplanner', {
       allowNull: false
     },
     num_stars: {
-      type: Sequelize.INTEGER,
-      isIn: [[1,2,3,4,5]],
+      type: Sequelize.FLOAT,
       allowNull: false
     },
     amenities: {
@@ -72,6 +71,12 @@ var db = new Sequelize('postgres://localhost/tripplanner', {
 
   Hotel.belongsTo(Place);
   Activity.belongsTo(Place);
-  Restaurant.belongsTo(Place); 
+  Restaurant.belongsTo(Place);
 
-module.exports = db;
+module.exports = {
+  db: db,
+  Place: Place,
+  Activity: Activity,
+  Restaurant: Restaurant,
+  Hotel: Hotel
+};

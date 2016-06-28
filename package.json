@@ -16,6 +16,7 @@
   "author": "GHA1606",
   "license": "MIT",
   "dependencies": {
+    "bluebird": "^3.4.1",
     "body-parser": "^1.15.2",
     "bower": "^1.7.9",
     "express": "^4.14.0",
