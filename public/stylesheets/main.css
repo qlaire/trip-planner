@@ -1,3 +1,10 @@
+body {
+  background-color: #cccccc; }
+
+@media (min-width: 1200px) {
+  .container {
+    width: 100%; } }
+
 #sidebar label {
   display: block;
   color: #c58df7; }
@@ -10,5 +17,4 @@
   margin-left: 20px; }
 
 #map {
-  height: 800px;
-  background-color: #ffdb99; }
+  height: 800px; }

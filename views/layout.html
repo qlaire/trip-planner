@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Trip Planner</title>
-  <link href = "/bootstrap/css/bootstrap.min.css" rel = "stylesheet">
-  <link href = "/stylesheets/main.css" rel = "stylesheet">
+  <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/stylesheets/main.css" rel="stylesheet">
 </head>
 <body>
-  <div class="navbar navbar-inverse navbar-static-top" id="header">
+  <div id="header" class="navbar navbar-inverse navbar-static-top">
     <div class="container">
       <h1><a href="/" class='navbar-brand'>Trip Planner</a></h1>
       <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
@@ -17,7 +17,9 @@
       </ul>
     </div>
   </div>
+  <div id="content">
   {% block content %}{% endblock %}
+  </div>
   <script src="bootstrap/js/bootstrap.min.js"></script>
   <script src="/jquery/jquery.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2K-psOnTuiKv-guE4l8dvrbglM3AO5oo&sensor=true"></script>
