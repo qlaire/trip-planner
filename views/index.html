@@ -47,31 +47,32 @@
       <h2 class="panel-title">Day 2</h2>
     </div>
     <div class="panel-body">
-      <button type="button" class="btn btn-warning">1</button>
-      <button type="button" class="btn btn-warning">2</button>
-      <button type="button" class="btn btn-warning">3</button>
-      <button type="button" class="btn btn-warning">+</button>
+      <div class="day-buttons">
+        <button type="button" class="btn btn-warning">1</button>
+        <button type="button" class="btn btn-warning">2</button>
+        <button type="button" class="btn btn-warning">3</button>
+        <button type="button" class="btn btn-warning">+</button>
+      </div>
+
       <h3>My Hotel</h3>
         <ul>
           {% for dayHotel in dayHotels %}
-          <li>{{dayHotel.name}}<button type="button" class="btn btn-danger btn-sm">x</button></li>
+          <li><i class="glyphicon glyphicon-home"></i>{{dayHotel.name}}<button type="button" class="btn btn-danger btn-xs">x</button></li>
           {% endfor %}
         </ul>
       <h3>My Restaurants</h3>
       <ul>
         {% for dayRestaurant in dayRestaurants %}
-        <li>{{dayRestaurant.name}}<button type="button" class="btn btn-danger btn-sm">x</button></li>
+        <li><i class="glyphicon glyphicon-cutlery"></i>{{dayRestaurant.name}}<button type="button" class="btn btn-danger btn-xs">x</button></li>
         {% endfor %}      </ul>
       <h3>My Activities</h3>
       <ul>
         {% for dayActivity in dayActivities %}
-        <li>{{dayActivity.name}}<button type="button" class="btn btn-danger btn-sm">x</button></li>
+        <li><i class="glyphicon glyphicon-camera"></i>{{dayActivity.name}}<button type="button" class="btn btn-danger btn-xs">x</button></li>
         {% endfor %}
       </ul>
     </div>
   </div>
-
-
   </div>
 
 </div>

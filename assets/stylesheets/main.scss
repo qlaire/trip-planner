@@ -12,8 +12,17 @@ body {
     }
 }
 
+.panel-heading h2{
+  text-align: center;
+}
+
+
 a.navbar-brand {
   font-size: 25px;
+}
+
+#sidebar .day-buttons {
+  text-align: center;
 }
 
 #sidebar .panel {
@@ -44,7 +53,23 @@ a.navbar-brand {
 
 #my-day h3 {
   font-size: 15px;
+  color: #5bc0de;
 }
+
+
+
+ul > li {
+  list-style-type: none;
+  padding: 5px 0;
+  .btn-danger {
+    float: right;
+    font-size: 8px;
+  }
+  i {
+    padding-right: 10px;
+  }
+}
+
 
 // #my-day .btn-danger {
 //
