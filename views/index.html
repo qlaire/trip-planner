@@ -1,31 +1,45 @@
 {% extends "layout.html" %}
 
 {% block content %}
-  <h3>Trip Planner</h3>
-  <hr>
-  <form method="GET" action="#">
-    <input type="text" name="search" />
-    <button type="submit">Search</button>
-  </form>
-  <hr>
-  <form>
-    <label for="hotels">Hotels</label>
-    <select name="hotels" id="">
-      {% for hotel in hotels %}
-      <option value="id{{hotel.id}}">{{hotel.name}}</option>
-      {% endfor %}
-    </select>
-    <label for="restaurants">Restaurants</label>
-    <select name="restaurants" id="">
-      {% for restaurant in restaurants %}
-      <option value="id{{restaurant.id}}">{{restaurant.name}}</option>
-      {% endfor %}
-    </select>
-    <label for="activities">Activities</label>
-    <select name="activities" id="">
-      {% for activity in activities %}
-      <option value="id{{activity.id}}">{{activity.name}}</option>
-      {% endfor %}
-    </select>
-  </form>
+<div class="container">
+  <div id="map" class="col-md-8">
+    <p>Here is a map</p>
+  </div>
+  <div id="sidebar" class="col-md-4" style="background-color:blue;">
+    <form>
+      <div class="form-group">
+      <label for="hotels">Hotels</label>
+        <select name="hotels" id="" class="form-control">
+          {% for hotel in hotels %}
+          <option value="id{{hotel.id}}">{{hotel.name}}</option>
+          {% endfor %}
+        </select>
+      <button type="button" class="btn btn-info">+</button>
+      </div>
+      <div class="form-group">
+        <label for="restaurants">Restaurants</label>
+        <select name="restaurants" id="" class="form-control">
+          {% for restaurant in restaurants %}
+          <option value="id{{restaurant.id}}">{{restaurant.name}}</option>
+          {% endfor %}
+        </select>
+        <button type="button" class="btn btn-info">+</button>
+      </div>
+      <div class="form-group">
+        <label for="activities">Activities</label>
+        <select name="activities" id="" class="form-control">
+          {% for activity in activities %}
+          <option value="id{{activity.id}}">{{activity.name}}</option>
+          {% endfor %}
+        </select>
+        <button type="button" class="btn btn-info">+</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-md-4" style="background-color:yellow;">
+    <p>Day</p>
+    <p>Some Numbers</p>
+    <p>Some other stuff</p>
+  </div>
+</div>
 {% endblock %}

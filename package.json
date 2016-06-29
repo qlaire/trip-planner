@@ -5,7 +5,10 @@
   "main": "app.js",
   "scripts": {
     "test": "test",
-    "start": "nodemon app.js"
+    "start:production": "node app.js",
+    "start:dev": "nodemon -e html,css,js app.js",
+    "start": "npm run start:dev",
+    "build-css": "node-sass -w -r assets/stylesheets/ -o public/stylesheets"
   },
   "keywords": [
     "trip",
@@ -25,5 +28,9 @@
     "pg-native": "^1.10.0",
     "sequelize": "^3.23.4",
     "swig": "^1.4.2"
+  },
+  "devDependencies": {
+    "node-sass": "^3.8.0",
+    "nodemon": "^1.9.2"
   }
 }

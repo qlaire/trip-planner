@@ -1,0 +1,18 @@
+#sidebar label {
+    display: block;
+    color: lighten(#7c10db, 30%);
+}
+
+#sidebar select {
+  display: inline-block;
+  max-width: 80%;
+}
+
+#sidebar button {
+  margin-left: 20px;
+}
+
+#map {
+  height: 800px;
+  background-color: green;
+}

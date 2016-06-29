@@ -18,6 +18,8 @@ app.use(bodyParser.urlencoded({ extended: true })); // for HTML form submits
 app.use(bodyParser.json()); // would be for AJAX requests
 
 app.use(express.static(__dirname + '/public'));
+app.use('/jquery', express.static(__dirname + '/bower_components/jquery/dist'));
+app.use('/bootstrap', express.static(__dirname + '/bower_components/bootstrap/dist'));
 
 app.use('/', require('./routes'));
 

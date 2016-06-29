@@ -1,0 +1,33 @@
+{
+  "name": "tripplanner",
+  "description": "The best trip planner ever (Until next workshop)",
+  "main": "app.js",
+  "authors": [
+    "Qlaire",
+    "Emily",
+    "Dana"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "trip",
+    "planner",
+    "tripplanner",
+    "fun"
+  ],
+  "homepage": "https://github.com/qlaire/trip-planner",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^3.0.0"
+  },
+  "resolutions": {
+    "jquery": "1.9.1 - 2"
+  }
+}
