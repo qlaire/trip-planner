@@ -22,7 +22,7 @@ a.navbar-brand {
 
 #sidebar label {
   display: block;
-  color: #9cc360; }
+  color: #5bc0de; }
 
 #sidebar select {
   display: inline-block;
@@ -37,6 +37,10 @@ a.navbar-brand {
 #my-day h3 {
   font-size: 15px;
   color: #5bc0de; }
+
+.btn-info {
+  background-color: #9cc360;
+  border-color: #90bc4d; }
 
 ul > li {
   list-style-type: none;
