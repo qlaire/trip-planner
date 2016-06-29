@@ -8,64 +8,71 @@
     </div>
   </div>
   <div id="sidebar" class="col-md-4">
-    <div id="">
-      <form>
-        <div class="form-group">
-        <label for="hotels">Hotels</label>
-          <select name="hotels" id="" class="form-control">
-            {% for hotel in hotels %}
-            <option value="id{{hotel.id}}">{{hotel.name}}</option>
-            {% endfor %}
-          </select>
-        <button type="button" class="btn btn-info">+</button>
-        </div>
-        <div class="form-group">
-          <label for="restaurants">Restaurants</label>
-          <select name="restaurants" id="" class="form-control">
-            {% for restaurant in restaurants %}
-            <option value="id{{restaurant.id}}">{{restaurant.name}}</option>
-            {% endfor %}
-          </select>
+    <div id="" class="panel panel-default">
+      <div class="panel-body">
+        <form>
+          <div class="form-group">
+          <label for="hotels">Hotels</label>
+            <select name="hotels" id="" class="form-control">
+              {% for hotel in hotels %}
+              <option value="id{{hotel.id}}">{{hotel.name}}</option>
+              {% endfor %}
+            </select>
           <button type="button" class="btn btn-info">+</button>
-        </div>
-        <div class="form-group">
-          <label for="activities">Activities</label>
-          <select name="activities" id="" class="form-control">
-            {% for activity in activities %}
-            <option value="id{{activity.id}}">{{activity.name}}</option>
-            {% endfor %}
-          </select>
-          <button type="button" class="btn btn-info">+</button>
-        </div>
-      </form>
+          </div>
+          <div class="form-group">
+            <label for="restaurants">Restaurants</label>
+            <select name="restaurants" id="" class="form-control">
+              {% for restaurant in restaurants %}
+              <option value="id{{restaurant.id}}">{{restaurant.name}}</option>
+              {% endfor %}
+            </select>
+            <button type="button" class="btn btn-info">+</button>
+          </div>
+          <div class="form-group">
+            <label for="activities">Activities</label>
+            <select name="activities" id="" class="form-control">
+              {% for activity in activities %}
+              <option value="id{{activity.id}}">{{activity.name}}</option>
+              {% endfor %}
+            </select>
+            <button type="button" class="btn btn-info">+</button>
+          </div>
+        </form>
+      </div>
     </div>
 
-  <div id="">
-    <h2>Day 2 this is a placeholder</h2>
-    <button type="button" class="btn btn-warning">1</button>
-    <button type="button" class="btn btn-warning">2</button>
-    <button type="button" class="btn btn-warning">3</button>
-    <button type="button" class="btn btn-warning">+</button>
-    <h3>My Hotel</h3>
+  <div id="my-day" class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">Day 2</h2>
+    </div>
+    <div class="panel-body">
+      <button type="button" class="btn btn-warning">1</button>
+      <button type="button" class="btn btn-warning">2</button>
+      <button type="button" class="btn btn-warning">3</button>
+      <button type="button" class="btn btn-warning">+</button>
+      <h3>My Hotel</h3>
+        <ul>
+          {% for dayHotel in dayHotels %}
+          <li>{{dayHotel.name}}<button type="button" class="btn btn-danger btn-sm">x</button></li>
+          {% endfor %}
+        </ul>
+      <h3>My Restaurants</h3>
       <ul>
-        <li>    <button type="button" class="btn btn-danger">x</button></li>
-        <li><button type="button" class="btn btn-danger">x</button></li></li>
+        {% for dayRestaurant in dayRestaurants %}
+        <li>{{dayRestaurant.name}}<button type="button" class="btn btn-danger btn-sm">x</button></li>
+        {% endfor %}      </ul>
+      <h3>My Activities</h3>
+      <ul>
+        {% for dayActivity in dayActivities %}
+        <li>{{dayActivity.name}}<button type="button" class="btn btn-danger btn-sm">x</button></li>
+        {% endfor %}
       </ul>
-    <h3>My Restaurants</h3>
-    <ul>
-      <li><button type="button" class="btn btn-danger">x</button></li></li>
-      <li><button type="button" class="btn btn-danger">x</button></li></li>
-      <li><button type="button" class="btn btn-danger">x</button></li></li>
-    </ul>
-    <h3>My Activities</h3>
-    <ul>
-      <li><button type="button" class="btn btn-danger">x</button></li></li>
-      <li><button type="button" class="btn btn-danger">x</button></li></li>
-    </ul>
+    </div>
   </div>
 
 
   </div>
-  
+
 </div>
 {% endblock %}

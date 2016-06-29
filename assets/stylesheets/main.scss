@@ -12,9 +12,21 @@ body {
     }
 }
 
+a.navbar-brand {
+  font-size: 25px;
+}
+
+#sidebar .panel {
+  background-color: #efefef;
+}
+
+#sidebar .btn {
+  border-radius: 100%;
+}
+
 #sidebar label {
     display: block;
-    color: lighten(#7c10db, 30%);
+    color: darken(#cadfaa, 20%);
 }
 
 #sidebar select {
@@ -27,5 +39,13 @@ body {
 }
 
 #map {
-  height: 800px;
+  height: 100vh;
 }
+
+#my-day h3 {
+  font-size: 15px;
+}
+
+// #my-day .btn-danger {
+//
+// }

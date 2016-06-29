@@ -5,9 +5,18 @@ body {
   .container {
     width: 100%; } }
 
+a.navbar-brand {
+  font-size: 25px; }
+
+#sidebar .panel {
+  background-color: #efefef; }
+
+#sidebar .btn {
+  border-radius: 100%; }
+
 #sidebar label {
   display: block;
-  color: #c58df7; }
+  color: #9cc360; }
 
 #sidebar select {
   display: inline-block;
@@ -17,4 +26,7 @@ body {
   margin-left: 20px; }
 
 #map {
-  height: 800px; }
+  height: 100vh; }
+
+#my-day h3 {
+  font-size: 15px; }

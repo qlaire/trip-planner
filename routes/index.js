@@ -12,13 +12,33 @@ router.get('/', function(req, res, next) {
   Promise.all([
     Hotel.findAll({}),
     Restaurant.findAll({}),
-    Activity.findAll({})
+    Activity.findAll({}),
+    Hotel.findAll({
+      where: {
+      amenities: 'Free Wi-Fi'
+      }
+    }),
+    Restaurant.findAll({
+      where: {
+        price: 2
+      }
+    }),
+    Activity.findAll({
+      where: {
+        placeId:{
+          gt: 41
+        }
+      }
+    })
   ])
   .then(function(valueArray) {
     res.render('index', {
       hotels: valueArray[0],
       restaurants: valueArray[1],
-      activities: valueArray[2]
+      activities: valueArray[2],
+      dayHotels: valueArray[3],
+      dayRestaurants: valueArray[4],
+      dayActivities: valueArray[5]
     });
   })
   .catch(next);
