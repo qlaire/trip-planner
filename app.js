@@ -19,9 +19,11 @@ app.use(bodyParser.json()); // would be for AJAX requests
 
 app.use(express.static(__dirname + '/public'));
 
-app.get('/', function(req, res) {
-  res.render('index');
-});
+app.use('/', require('./routes'));
+
+// app.get('/', function(req, res) {
+//   res.render('index');
+// });
 
 // catch 404 (i.e., no route was hit) and forward to error handler
 app.use(function(req, res, next) {
